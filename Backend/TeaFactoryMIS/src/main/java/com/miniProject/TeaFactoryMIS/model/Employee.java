@@ -27,6 +27,10 @@ public class Employee {
     @Column(columnDefinition = "VARBINARY(MAX)")
     private byte[] image;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "userId", nullable = false)
+    private User user;
+
 
 
 }
